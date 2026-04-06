@@ -3,6 +3,16 @@
 @section('content')
 <div class="container mt-4">
     <h2>Управління номерами</h2>
+    @if(session('success'))
+    <div class="alert alert-success">
+        {{ session('success') }}
+    </div>
+    @endif
+
+    <div class="mb-3">
+        <a href="{{ route('rooms.create') }}" class="btn btn-primary">Додати новий номер</a>
+    </div>
+
     <table class="table table-bordered mt-3">
         <thead class="table-dark">
             <tr>

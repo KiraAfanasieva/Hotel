@@ -8,7 +8,9 @@ class RoomController extends Controller
 {
     public function index()
     {
+        $rooms = \App\Models\Room::all(); 
         
+        return view('rooms.index', ['rooms' => $rooms]);
     }
 
     public function show($id)
