@@ -8,11 +8,13 @@ class MainController extends Controller
 {
     public function index()
     {
-        return "Вітаємо на головній сторінці системи управління готелем!";
+        // Повертає шаблон resources/views/home.blade.php
+        return view('home'); 
     }
 
     public function about()
     {
-        return "Про проєкт: Автоматизована інформаційна система готелю. Призначена для контролю номерного фонду та бронювань.";
+        // Повертає шаблон resources/views/about.blade.php
+        return view('about'); 
     }
 }
