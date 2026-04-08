@@ -15,6 +15,8 @@ class RoomController extends Controller
 
     public function show($id)
     {
-        return "Детальна інформація та форма бронювання для номера з ID: " . $id . " (сюди теж згодом можна буде додати свій шаблон)";
+        $room = \App\Models\Room::findOrFail($id);
+
+        return view('rooms.show', ['room' => $room]);
     }
 }
