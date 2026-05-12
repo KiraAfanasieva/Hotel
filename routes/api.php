@@ -9,3 +9,7 @@ Route::get('/rooms/{id}', [RoomController::class, 'show']);
 Route::post('/rooms/store', [RoomController::class, 'store']);
 Route::put('/rooms/{id}', [RoomController::class, 'update']);
 Route::delete('/rooms/{id}', [RoomController::class, 'destroy']);
+
+Route::get('/categories', function() {
+    return response()->json(['lux', 'halflux', 'standard']);
+});
